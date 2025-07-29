@@ -1,0 +1,109 @@
+* {
+  font-family: Ubuntu;
+  transition: .5s;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header, div, footer, form {
+  margin-bottom: 2pc;
+  border-radius: 5pc;
+  background-color: #000000;
+  padding: 1pc;
+  box-shadow: 0 0 7pc hsl(350, 100%, 50%);
+}
+
+footer {
+  margin-bottom: .1pc;
+  font-size: 1.2pc;
+}
+
+form p, div p{
+  font-size: 2pc;
+}
+
+h1 {
+  font-size: 3pc;
+  margin: 1.5pc;
+}
+
+h2 {
+  margin: 1.5pc;
+  font-size: 2pc;
+}
+
+form {
+  font-size: 1.5pc;
+}
+
+input[type=submit] {
+  font-size: 2pc;
+  margin: 1pc;
+  padding: .5pc;
+  width: 9pc;
+}
+
+input[type=submit]:hover, input[value=Download]:hover {
+  border-radius: 8pc;
+}
+
+img {
+  padding: 2pc;
+}
+
+input[type=button] {
+  font-size: 1.7pc;
+  padding: .5pc;
+}
+
+input[type=url] {
+  font-size: 1.5pc;
+  width: 20pc;
+  padding: .5pc;
+  border-radius: .5pc;
+  border-style: none;
+}
+
+button {
+  background-color: transparent;
+  height: 8pc;
+  color: #fff;
+  width: 8pc;
+  border-style: none;
+}
+
+input[type=color] {
+  height: 3pc;
+  width: 4pc;
+}
+
+select {
+  font-size: 1.5pc;
+  padding: .2pc;
+  margin: .2pc;
+  width: 8pc;
+}
+
+#body-span {
+  display: inline-flex;
+  /* align-items: center; */
+}
+
+/* Mobile Style */
+@media (max-width: 911px) {
+  input, img, h2, h1, div, form {
+    display: inline-block;
+  }
+
+  #body-span {
+    display: grid;
+  }
+
+  select {
+    margin-left: .5pc;
+    margin-right: .5pc;
+  }
+}

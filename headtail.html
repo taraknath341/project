@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      font-family: Ubuntu;
+    }
+    body {
+      background-color: black;
+      color: white;
+    }
+    #toss-btn {
+      height: 9pc;
+      width: 9pc;
+      transition: 0.8s;
+      font-size: 2pc;
+      border-radius: 3pc; 
+    }
+    pre {
+      font-family:monospace;
+      font-size: 0.7pc;
+    }
+    img {
+      height: 9pc;
+    }
+  </style>
+  <title>Head Tail</title>
+</head>
+<body>
+  <br><br><br>
+  <center>
+    <h3>Tarak Program</h3>
+    <h1>Head - Tale</h1>
+    <br><br>
+    <button id="toss-btn"><font size="5">Click Me!</font></button>
+    <br>
+  </center>
+    <br><br><br>
+    <br><br>
+  <pre>
+    Company: Tarak Program.
+    Coder: Taraknath Karan.
+  </pre>
+  <script>
+    "use strict";
+    const returnHeadOrTale = () => {
+      const a = Math.round(Math.random() * 10);
+      if (a < 5) {
+        return "HEAD";
+      } else {
+        return "TALE";
+      }
+    };
+    let deg = 0;
+    const tossBtn = document.querySelector("#toss-btn");
+    tossBtn.addEventListener("click" , (function () {
+      deg += 720;
+      tossBtn.style = `
+        transform: rotateX(${deg}deg);
+      `;  
+      if (deg > 5555) {
+        deg = 0;
+      }
+      tossBtn.textContent = returnHeadOrTale();
+    }))
+  </script>
+</body>
+</html>

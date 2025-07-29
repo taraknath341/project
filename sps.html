@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Sizer</title>
+    <style>
+      body {
+        transition: 0.5s;
+        background-image:url(img/backgro.png);
+        color: #fff;
+        font-family:Ubuntu;
+      }
+      .companyName {
+        transition: 0.5s;
+        font-size: 1.3pc;
+        font-family:Ubuntu;
+      }
+      .gameName {
+        transition: 0.5s;
+        font-size: 3pc;
+        font-family:Ubuntu;
+      }
+      .play {
+        transition: 0.5s;
+        height: 5pc;
+        width: 8pc;
+        font-size: 3pc;
+        border-radius: 0.5;
+        border-style: none;
+        font-family:Ubuntu;
+      }
+      .play:hover {
+        transform:rotate(30deg);
+      }
+      .choice {
+        transition: 0.5s;
+        height: 7pc;
+        width: 7pc;
+        font-size: 2pc;
+        border-radius: 2pc;
+        border-style: none;
+        font-family:Ubuntu;
+      }
+      .choice:hover {
+        transform: rotatex(50deg);
+      }
+      .hidden {
+        color: #00000000;
+      }
+      .aaaa {
+        height: 7pc;
+        width: 8pc;
+        background-color: rgba(110, 78, 14, 0.623);
+        color:#ffffffea; 
+        border-radius: 1pc;
+        border-style: none;
+        font-family:Ubuntu;
+
+      }
+      .aabb {
+        height: 2pc;
+        width: 8pc;
+        font-family:Ubuntu;
+        font-size: 1.3pc;
+      }
+      #game-body {
+        font-family:Ubuntu;
+        width: 90%;
+      }
+      .zoom-btn {
+        background-color: black;
+        color: white;
+        font-family:Ubuntu;
+        height: 3pc;
+        width: 3pc;
+        border-color: #fff;
+        border-style: groove;
+        font-size: 1.5pc;
+      }
+      .score {
+        font-family:Ubuntu;
+        font-size: 1.5pc;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <button class="zoom-btn" onclick="zoomBtn(15)">+</button>
+      <button class="zoom-btn" onclick="zoomBtn(-15)">-</button>
+      <br>
+      <center>
+      <div id="game-body"></div>
+    </center>
+    <script>
+      "use strict";
+      const score = {
+        you: 0,
+        com: 0,
+      }
+      const game_body = document.querySelector("#game-body");
+      const exit = function() {
+        game_body.innerHTML = `
+          <br><br>
+          <h2 class="companyName">Tarak Program</h2>
+          <h1 class="gameName">Stone Paper Sizer</h1>
+          <br><br>
+          <button class="play" onClick="playBtn()">Play</button>
+          <br><br>
+          <pre>Coder Name: Taraknath Karan.</pre>
+        `;
+        score.com = 0;
+        score.you = 0;
+      }
+      exit();
+      const computerMode = () => {
+        let a = Math.round(Math.random() * 100);
+        console.log(a);
+        if (a < 33) {
+          return "Stone";
+        } else if (a < 66) {
+          return "Paper";
+        } else {
+          return "Sizer";
+        }
+      };
+      const playBtn = () => {
+        game_body.innerHTML = `
+          <p class="score">You: ${score.you} || Com: ${score.com}</p>
+          <p>Choice Your:</p>
+          <button class="choice" onClick="playMode('Stone')">Stone</button>
+          <span class="hidden">..</span>
+          <button class="choice" onClick="playMode('Paper')">Paper</button>
+          <span class="hidden">..</span>
+          <button class="choice" onClick="playMode('Sizer')">Sizer</button>
+          <br><br><br>
+          <br><br><br>
+          <button onClick="exit()" class="aabb">Exit</button>
+          `;
+      }
+      const gameResult = (userPower, computerPower) => {
+        if (userPower == computerPower) {
+          return "Game Due";
+        } else if ((userPower == "Stone" && computerPower == "Sizer") || (userPower == "Paper" && computerPower == "Stone") || (userPower == "Sizer" && computerPower == "Paper")) {
+          return "You Win";
+        } else {
+          return "You Lose";
+        }
+      }
+      const scoreUpCom = (par) => {
+        if (par == "You Lose") {
+          let re = ++score.com;
+          return re;
+        } else {
+          return score.com;
+        }
+      }
+      const scoreUpYou = (par) => {
+        if (par == "You Win") {
+          let re = ++score.you;
+          return re;
+        } else {
+          return score.you;
+        }
+      }
+      const playMode = (userPower) => {
+        let b = computerMode();
+        let total = gameResult(userPower, b);
+        game_body.innerHTML = `
+          <p class="score">You: ${scoreUpYou(total)} || Com: ${scoreUpCom(total)}</p>
+          <button class="aaaa">
+            <font size="4">You</font>
+            <br><br><br><br>
+            <font size="6">${userPower}</font>
+          </button>
+          <span class="hidden">. . .</span>
+          <button class="aaaa">
+            <font size="4">Com</font>
+            <br><br><br><br>
+            <font size="6">${b}</font>
+          </button>
+          <br><br><br><br>
+          <font size="7">${total}</font>
+          <br><br><br>
+          <button onClick="exit()" class="aabb">Exit</button>
+          <button onClick="playBtn()" class="aabb">Play Again</button>
+        `;
+      }
+      let zoomValue = 100;
+      function zoomBtn(z) {
+        zoomValue += z;
+        game_body.style.zoom = `${zoomValue}%`;
+      }
+      zoomBtn(10);
+    </script>
+  </body>
+</html>

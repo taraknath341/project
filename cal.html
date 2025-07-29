@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP Calculator</title>
+  <link rel="icon" href="img/logo.svg">
+  <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(img/back.png);
+    background-size: cover;
+  }
+  
+  .calculator {
+    width: 350px;
+    background: #000000b2;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
+  
+  .display {
+    margin-bottom: 30px;
+  }
+  
+  #display {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff3a;
+    color:#fff;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background: #f1a7094f;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background: #f1a70993;
+  }
+  
+  button:nth-child(17) {
+    grid-column: span 2;
+  }
+  
+  .textTarak{
+    font-size: larger;
+    color: white;
+  }
+  
+  </style>
+</head>
+<body>
+   <br>
+  <div class="calculator">
+    <div class="textTarak">
+      <center>
+        Tarak Program
+      </center></div><br>
+    <div class="display">
+      <input type="text" id="display" disabled/>
+    </div>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteChar()">DEL</button>
+      <button onclick="appendToDisplay('%')">%</button>
+      <button onclick="appendToDisplay('/')">/</button>
+
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('*')">*</button>
+
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('-')">-</button>
+
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('+')">+</button>
+
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+  </div>
+  <script>
+    // Append values to the display
+function appendToDisplay(value) {
+  const display = document.getElementById('display');
+  display.value += value;
+}
+
+// Clear the display
+function clearDisplay() {
+  const display = document.getElementById('display');
+  display.value = '';
+}
+
+// Delete the last character
+function deleteChar() {
+  const display = document.getElementById('display');
+  display.value = display.value.slice(0, -1);
+}
+
+// Calculate the result
+function calculateResult() {
+  const display = document.getElementById('display');
+  try {
+    display.value = eval(display.value);
+  } catch (error) {
+    display.value = 'Error';
+  }
+}
+
+  </script>
+</body>
+</html>

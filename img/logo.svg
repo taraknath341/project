@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M1024 6.10352e-05L1024 1024L0 1024L6.86646e-05 0L1024 6.10352e-05Z" fill="#101C21" fill-rule="evenodd" transform="scale(1 1)" />
+    <path d="M136 0L272 136L136 272L0 136L136 0Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 378.085 34.77)" />
+    <path d="M136.667 0L205 68.3333L68.3333 205L0 136.667L136.667 0Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 562.552 219.237)" />
+    <path d="M252.668 0L321 68.3316L68.3317 321L0 252.668L252.668 0Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 562.552 335.324)" />
+    <path d="M368.669 0L437 68.3309L68.3309 437L0 368.669L368.669 0Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 562.552 451.411)" />
+    <path d="M405 336.706L336.706 405L0 68.2941L68.2941 0L405 336.706Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 261.998 219.237)" />
+    <path d="M550 481.746L481.746 550L0 68.254L68.2539 0L550 481.746Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 148.295 337.709)" />
+    <path d="M550 481.746L481.746 550L0 68.254L68.2539 0L550 481.746Z" fill="#FFFFFF" fill-rule="evenodd" transform="matrix(1 0 0 1 32.208 453.796)" />
+  </g>
+</svg>

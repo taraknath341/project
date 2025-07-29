@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temperature Converter</title>
+	<link rel="icon" href="img/logo.svg">
+	<style>
+		body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	background-image: url(img/back.png);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+}
+.container {
+	text-align: center;
+	background-color: #2929296c;
+	padding: 20px;
+	border-radius: 30px;
+	box-shadow: 0 4px 20px #000000;
+	width: 600px;
+	height: 400px;	
+}
+h1 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 20px;
+}
+.input-section {
+	margin-bottom: 20px;
+}
+select, input {
+	padding: 8px;
+	font-size: 16px;
+	border: 2px solid #aaa;
+	border-radius: 5px;
+	margin-top: 10px;
+	outline: none;
+}
+select:focus, input:focus {
+	border-color: #6a11cb;
+	box-shadow: 0 0 10px #0000008f;
+}
+.conversion-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.arrow {
+	margin: 15px 0;
+}
+#result {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+@media (max-width: 500px) {
+	.container {
+		width: 80%;
+	}
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+			<h3>Tarak Program</h3>
+		<h1>Temperature Converter</h1>
+			<div class="input-section">
+				<label for="unit-select">Select Conversion:</label><br>
+				<select id="unit-select" onchange="convertTemperature()">
+					<option value="celsius-to-fahrenheit">Celsius to Fahrenheit</option>
+					<option value="fahrenheit-to-celsius">Fahrenheit to Celsius</option>
+				</select>
+			</div>
+			<div class="conversion-box">
+				<input type="number" id="input" placeholder="Enter temperature" oninput="convertTemperature()">
+				<div class="arrow">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Arrow_Icon.svg" alt="arrow" width="50">
+				</div><br>
+				<font id="result" style="font-size:x-large;">Result will appear here</font>
+			</div>
+		
+	</div>
+
+	<script>
+		function convertTemperature() {
+			const unitSelect = document.getElementById("unit-select");
+			const inputField = document.getElementById("input");
+			const resultField = document.getElementById("result");
+			const inputValue = inputField.value;
+			if (isNaN(inputValue) || inputValue === "") {
+				resultField.textContent = "Please enter a valid temperature.";
+				return;
+			}
+			if (unitSelect.value === "celsius-to-fahrenheit") {
+				// Convert Celsius to Fahrenheit
+				const fahrenheit = (inputValue * 9/5) + 32;
+				resultField.textContent = `${inputValue}°C = ${fahrenheit.toFixed(2)}°F`;
+			} else if (unitSelect.value === "fahrenheit-to-celsius") {
+				// Convert Fahrenheit to Celsius
+				const celsius = (inputValue - 32) * 5/9;
+				resultField.textContent = `${inputValue}°F = ${celsius.toFixed(2)}°C`;
+			}
+		}
+		console.log("Made With Taraknath Karan");
+
+	</script>
+</body>
+</html>
