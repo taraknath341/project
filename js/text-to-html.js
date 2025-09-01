@@ -1,6 +1,6 @@
 function convertToHTML(text) {
   // ``` কে ফাকা করে 
-  let html = text.split("```\n").join("</textarea>").split("``` ").join("</textarea>").split("```").join("<textarea>");
+  let html = text.split("```\n").join("</textarea><br>").split("``` ").join("</textarea><br>").split("```").join("<textarea>");
 
   // Bold (**...**) -> <strong>...</strong>
   html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
