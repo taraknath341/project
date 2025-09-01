@@ -52,13 +52,13 @@ let programList = [
   {
     title: "Tarak Search",
     subTitle: "India's Search Engine.",
-    url: "//taraksearch.netlify.app",
+    url: "https://taraksearch.netlify.app",
     imgUrl: "./img/logo.svg"
   },
   {
     title: "Tarak AI",
     subTitle: "India's Artificial Intelligence.",
-    url: "https://taraksearch.netlify.app",
+    url: "./ai.html",
     imgUrl: "./img/logo.svg"
   },
 ]
