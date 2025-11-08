@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>QR Code Maker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Taraknath Karan">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+  <script src="https://taraknath341.github.io/js/userInfo.js"></script>
+</head>
+
+<body>
+  <center>
+    <header>
+      <h2>Tarak Program's</h2>
+      <h1>QR Code Maker</h1>
+    </header>
+  </center>
+  <center>
+    <span id="body-span">
+      <center>
+        <form onsubmit="return false">
+          Error Level: <select id="ecLevel">
+            <option value="L">Low</option>
+            <option value="M">Medium</option>
+            <option value="H">High</option>
+          </select>
+          <br>
+          Format: <select id="format">
+            <option value="png">PNG</option>
+            <option value="webp">Webp</option>
+            <option value="pdf">PDF</option>
+            <option value="svg">SVG</option>
+          </select>
+          <br>
+
+          <button disabled>
+            <h3>Body Color</p>
+              <input type="color" id="dark">
+          </button>
+          <button disabled>
+            <h3>Background Color</h3>
+            <input type="color" id="light" value="#ffffff">
+          </button>
+          <br>
+          <br>
+          <input type="url" value="https://tarakpro.netlify.app" placeholder="https://tarakpro.netlify.app" required>
+          <br>
+          <input type="submit" value="Create" onclick="createQrCode()">
+        </form>
+      </center>
+      <center>
+        <div>
+          <p>Your QR Code</p>
+          <img
+            src="https://quickchart.io/qr?text=https://tarakpro.netlify.app&dark=000000&light=ffffff&margin=3&size=300&format=svg"
+            height="288pc" id="qr">
+          <br>
+          <input type="button" value="Download" onclick="downloadBtn()">
+        </div>
+      </center>
+    </span>
+  </center>
+  <center>
+    <footer>
+      &copy; 2026 Tarak Program
+    </footer>
+  </center>
+  <script src="script.js"></script>
+</body>
+
+</html>

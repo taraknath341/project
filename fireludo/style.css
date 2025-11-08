@@ -1,0 +1,98 @@
+* {
+  font-family: Ubuntu;
+}
+
+:root {
+  --buttonHeightWidth: 3.8pc;
+}
+
+body {
+  background-color: black;
+  color: white;
+  zoom: 90%;
+}
+
+#snake-game {
+  background-color: rgba(255, 68, 0, 0.178);
+  height: 34pc;
+  width: 32pc;
+  padding: .1px;
+  border-radius: 2pc;
+  box-shadow: 0 0 55pc orange;
+}
+
+button {
+  margin: 2px 1px;
+  height: var(--buttonHeightWidth);
+  width: var(--buttonHeightWidth);
+  border-style: none;
+  border-radius: 1pc;
+  font-size: 1.5pc;
+  background-color: white;
+}
+
+#লুডোছক্কা-বাবা {
+  display: inline-block;
+  width: 5pc;
+  height: 5pc;
+  color: transparent;
+  background-color: transparent;
+}
+
+#লুডোছক্কা,
+#লুডোছক্কা1,
+#resultNumRed,
+#resultNumBlue,
+#reset {
+  width: 4pc;
+  height: 4pc;
+  border-radius: 2pc;
+  color: #fff;
+  font-size: 2.4pc;
+  transition: 0.5s;
+}
+
+#reset {
+  background-color: orange;
+  box-shadow: 0 0 5pc orange;
+}
+
+#লুডোছক্কা {
+  background-color: red;
+  box-shadow: 0 0 5pc red;
+}
+
+#লুডোছক্কা1 {
+  background-color: blue;
+  box-shadow: 0 0 5pc blue;
+}
+
+#resultNumRed {
+  color: #fff;
+  font-size: 3pc;
+  background-color: red;
+  box-shadow: 0 0 5pc red;
+}
+
+#resultNumBlue {
+  color: #fff;
+  font-size: 3pc;
+  background-color: blue;
+  box-shadow: 0 0 5pc blue;
+}
+
+#id12,
+#id24,
+#id39,
+#id28,
+#id47 {
+  background-color: #f5617a;
+}
+
+#reset {
+  color: black
+}
+
+.hidden {
+  color: transparent;
+}

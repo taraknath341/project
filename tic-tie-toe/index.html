@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic-Tie-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Taraknath Karan">
+  <script src="https://taraknath341.github.io/js/userInfo.js"></script>
+</head>
+
+<body>
+  <center>
+    <div id="game-body">
+      <p id="score">X = 0 || O = 0</p>
+      <button class="play-ground" onclick="btn(1)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(2)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(3)"><span class="hidden">.</span></button>
+      <br>
+      <button class="play-ground" onclick="btn(4)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(5)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(6)"><span class="hidden">.</span></button>
+      <br>
+      <button class="play-ground" onclick="btn(7)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(8)"><span class="hidden">.</span></button>
+      <button class="play-ground" onclick="btn(9)"><span class="hidden">.</span></button>
+      <p id="result">-</p>
+      <nav>
+        <button class="nav-btn" onclick="playAgain()">Play Again</button>
+        <button class="nav-btn" onclick="reset()">Reset</button>
+        <br>
+      </nav>
+    </div>
+  </center>
+  <pre>
+    Company: Tarak Program.
+    Coder Name: Taraknath Karan.
+  </pre>
+  <script src="script.js"></script>
+</body>
+
+</html>

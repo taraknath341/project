@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  color: aliceblue;
+  font-family: Ubuntu;
+  zoom: 90%;
+}
+
+.play-ground {
+  height: 6pc;
+  width: 6pc;
+  font-size: 3pc;
+  border-radius: 0.6pc;
+  border-style: groove;
+  border-color: black;
+  font-family: Ubuntu;
+}
+
+#game-body {
+  width: 30pc;
+  height: 35pc;
+  border-radius: 1.6pc;
+  border-style: dashed;
+  font-family: Ubuntu;
+  background-color: rgba(167, 44, 44, 0.445);
+}
+
+#result,
+#score {
+  font-size: 2pc;
+  font-family: Ubuntu;
+}
+
+.nav-btn {
+  width: 6pc;
+  font-family: Ubuntu;
+  height: 2pc;
+  font-size: 1pc;
+  border-radius: 0.2pc;
+  border-style: none;
+}
+
+.hidden {
+  color: white;
+}

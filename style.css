@@ -1,0 +1,101 @@
+body {
+	font-family: Ubuntu;
+	margin: 0;
+	padding: 0;
+	background-color: #242323;
+	color: #ffffff;
+}
+
+header {
+	background-color: #2727276e;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	background-color: #4444446e;
+	padding: 1px;
+}
+
+nav a,
+button {
+	background-color: #00000000;
+	border-style: hidden;
+	color: white;
+	padding: 14px 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+nav a:hover
+
+/* ,button:hover */
+	{
+	color: #a82c07ec;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 1px;
+	width: 100%;
+}
+
+.background {
+	background-image: url(img/background.png);
+	background-size: cover;
+}
+
+.program {
+	background-color: #222222;
+	margin: 10px;
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 4px 8px #0000008a;
+	text-align: center;
+	width: 200px;
+	height: 12pc;
+	transition: 0.5s;
+}
+
+.program img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	margin-bottom: 10px;
+	border-radius: 20%;
+}
+
+.program h3 {
+	margin: 10px 0;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.program p {
+	font-size: 14px;
+	color: #c7c7c7;
+}
+
+.program:hover {
+	transform: rotateZ(30deg);
+}
+
+a {
+	text-decoration: none;
+}

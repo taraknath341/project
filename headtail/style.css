@@ -1,0 +1,25 @@
+* {
+  font-family: Ubuntu;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#toss-btn {
+  height: 9pc;
+  width: 9pc;
+  transition: 0.8s;
+  font-size: 2pc;
+  border-radius: 3pc;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 0.7pc;
+}
+
+img {
+  height: 9pc;
+}

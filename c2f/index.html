@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Taraknath Karan">
+	<title>Temperature Converter</title>
+	<link rel="icon" href="../img/logo.svg">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://taraknath341.github.io/js/userInfo.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h3>Tarak Program</h3>
+		<h1>Temperature Converter</h1>
+		<div class="input-section">
+			<label for="unit-select">Select Conversion:</label><br>
+			<select id="unit-select" onchange="convertTemperature()">
+				<option value="celsius-to-fahrenheit">Celsius to Fahrenheit</option>
+				<option value="fahrenheit-to-celsius">Fahrenheit to Celsius</option>
+			</select>
+		</div>
+		<div class="conversion-box">
+			<input type="number" id="input" placeholder="Enter temperature" oninput="convertTemperature()">
+			<div class="arrow">
+				⬆️
+			</div><br>
+			<font id="result" style="font-size:x-large;">Result will appear here</font>
+		</div>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

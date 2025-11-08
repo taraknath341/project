@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Taraknath Karan">
+  <title>Tarak AI</title>
+  <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+  <script src="text-to-html.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://taraknath341.github.io/js/userInfo.js"></script>
+</head>
+
+<body>
+  <div class="chatbot-container">
+    <div class="chat-header">
+      <img class="company-logo" src="../img/logo.svg">
+      <div class="header-info">
+        <div class="company-name">Tarak AI</div>
+        <div class="ai-status">
+          © Tarak Program | Since 2025.
+        </div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="welcome-message">
+        <div class="welcome-title">Welcome to Tarak AI</div>
+        <div class="welcome-subtitle">
+          I'm here to help you with any questions or tasks you might have.
+          Feel free to ask me anything!
+          <br><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input-container">
+      <div class="input-wrapper">
+        <input class="chat-input" id="chatInput" placeholder="Type your message here..." rows="1">
+        <button class="send-button" id="sendButton" onclick="sendMessage()">
+          ➤
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

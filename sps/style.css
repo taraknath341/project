@@ -1,0 +1,82 @@
+* {
+  font-family: Ubuntu;
+}
+
+body {
+  transition: 0.5s;
+  background-color: black;
+  color: #fff;
+}
+
+.companyName {
+  transition: 0.5s;
+  font-size: 1.3pc;
+}
+
+.gameName {
+  transition: 0.5s;
+  font-size: 3pc;
+}
+
+.play {
+  transition: 0.5s;
+  height: 5pc;
+  width: 8pc;
+  font-size: 3pc;
+  border-radius: 0.5;
+  border-style: none;
+}
+
+.play:hover {
+  transform: rotate(30deg);
+}
+
+.choice {
+  transition: 0.5s;
+  height: 7pc;
+  width: 7pc;
+  font-size: 2pc;
+  border-radius: 2pc;
+  border-style: none;
+}
+
+.choice:hover {
+  transform: rotatex(50deg);
+}
+
+.hidden {
+  color: #00000000;
+}
+
+.aaaa {
+  height: 7pc;
+  width: 8pc;
+  background-color: rgba(110, 78, 14, 0.623);
+  color: #ffffffea;
+  border-radius: 1pc;
+  border-style: none;
+}
+
+.aabb {
+  height: 2.5pc;
+  width: 8pc;
+  font-size: 1.3pc;
+}
+
+#game-body {
+  width: 90%;
+}
+
+.zoom-btn {
+  background-color: black;
+  color: white;
+  height: 3pc;
+  width: 3pc;
+  border-color: #fff;
+  border-style: groove;
+  font-size: 1.5pc;
+}
+
+.score {
+  font-size: 1.5pc;
+}

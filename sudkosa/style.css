@@ -1,0 +1,45 @@
+body {
+  color: white;
+  background-color: black;
+
+}
+
+.subDiv {
+  height: 80px;
+  width: 200px;
+  box-shadow: 0 0 9pc orangered;
+  border-radius: 15px;
+}
+
+#mainDiv {
+  height: 525px;
+  width: 339px;
+  box-shadow: 0 0 9pc orangered;
+  border-radius: 22px;
+}
+
+.br {
+  height: 1px;
+}
+
+select,
+input {
+  border-style: none;
+  font-size: 1.2pc;
+  padding: .2pc;
+  width: 10pc;
+  background-color: #fff;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.btn {
+  height: 30px;
+  width: 60px;
+}
+
+.inp {
+  font-size: 1.1pc;
+}
